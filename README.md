@@ -80,12 +80,15 @@ for i in range(num_trials)
 ```
 ### Results
 According to ```Yan_et_al_05.pdf```, their strategy resulted in a base winrate of ~13% (Section 5, Table 1).  In ```Bjarnason_et_al_07.pdf``` their strategy resulted in a base winrate of ~16%.  In this project, we compared the strategy in ```Yan_et_al_05.pdf``` with a strategy developed by project member Nicholas Inzunza.  Each of their strategies are as follows:
+
 1. Yan et al 2005:
+
 Heuristic:
  - if a card is played onto the Suitstacks, then that is +5
  - if a card is being played from the Hand to the Tableau, that is +5
  - if a card is being played from the Suitstacks to the Tableau, that -10
  - OTHERWISE it is +0
+
 Priority:
  - For a card being played onto the Tableau,
     - If we are moving the card across the Tableau, then if this card would flip a face down card, its priority is k+1 where k is the number of total face down cards in the pile where the card is being flipped
@@ -94,11 +97,14 @@ Priority:
        - then if the Queen (or 9) with which it may become braided (i.e. opposite color) is anywhere except face down in the Tableau, then the priority is 1
        - otherwise it is -1
   - OTHERWISE it is +0
+
 2. Nicholas Inzunza:
+
 Heuristic:
  - if a card is moving from the Tableau and would flip a card face up, then it is 5+k where k is the number of face down cards in its pile
  - otherwise, if it is moving into the Suitstacks, it is +5
  - all other scenarios are +0
+
 Priority:
  - We chose to parrot priorities of Yan et al 2005 involving Kings in the Hand, but in general priority from the Hand is 0
  - A card played from anywhere which when played has the potential to move a card which would unblock a face down card from the Tableau has priority k+1 where k is the number of face down cards in the pile which would be unblocked
