@@ -109,4 +109,4 @@ The strategy implemented by the priorities may perhaps be cheating, as this woul
 
 The winrates and number of moves it takes to win are compared in ```statistics.ipynb``` but are reiterated here.
 
-
+The strategy outlined in ```Yan_et_al_05.pdf``` is ~13% and in the modified version of solitaire which we simulated, it had a winrate of ~20% using an Italian deck.  Our strategy had a winrate of ~73.6%.  We took 1000 trials.  The average number of moves it took the Yan strategy to win was ~55 while ours was ~40.  Using the full deck, the winrates were ~6.5% for the Yan strategy and ~53% for our strategy with an average of 73 and 55 moves to win, respectively.
